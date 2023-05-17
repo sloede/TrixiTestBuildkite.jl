@@ -1,0 +1,7 @@
+name = "TrixiTestBuildkite"
+uuid = "31f7ea7d-d3fe-4bfa-a2fa-b1127fd228f8"
+authors = ["Michael Schlottke-Lakemper <michael@sloede.com>"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.9"
