@@ -1,0 +1,13 @@
+steps:
+  - label: "Run tests with Julia v{{matrix.version}}"
+    matrix:
+      setup:
+        version:
+          - "1.9"
+    plugins:
+      - JuliaCI/julia#v1:
+          version: "{{matrix.version}}"
+      - JuliaCI/julia-test#v1:
+          coverage: false
+      # - JuliaCI/julia-coverage#v1:
+      #     codecov: true
