@@ -6,3 +6,4 @@
 [![Build Status](https://github.com/sloede/TrixiTestBuildkite.jl/badges/main/pipeline.svg)](https://github.com/sloede/TrixiTestBuildkite.jl/pipelines)
 [![Coverage](https://codecov.io/gh/sloede/TrixiTestBuildkite.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/sloede/TrixiTestBuildkite.jl)
 [![Coverage](https://coveralls.io/repos/github/sloede/TrixiTestBuildkite.jl/badge.svg?branch=main)](https://coveralls.io/github/sloede/TrixiTestBuildkite.jl?branch=main)
+[![Build status](https://badge.buildkite.com/492ba37ec6b3a3025de00a695498df9031202928790e5e3a98.svg)](https://buildkite.com/trixi-framework/ci)
