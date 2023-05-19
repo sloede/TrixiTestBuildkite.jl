@@ -1,0 +1,15 @@
+steps:
+  - label: "Run tests with Julia v{{matrix.version}}"
+    matrix:
+      setup:
+        version:
+          - "1.9"
+    command: |
+        echo "BUILDKITE_BRANCH=${BUILDKITE_BRANCH}"
+        echo "github_user=${BUILDKITE_BRANCH%%:*}"
+    plugins:
+      - JuliaCI/julia#v1:
+          version: "{{matrix.version}}"
+      - JuliaCI/julia-test#v1:
+          coverage: true
+      - JuliaCI/julia-coverage#v1: ~
