@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euxo pipefail
+set -exo pipefail
 
 # # Set paths
 # WORKING_DIR=$PWD
@@ -28,7 +28,6 @@ apt-get install -y curl
 echo $JULIA_VERSION
 curl -fsSL https://install.julialang.org | sh -s -- -y
 . /root/.bashrc
-. /root/.profile
 juliaup add $JULIA_VERSION
 juliaup default $JULIA_VERSION
 
