@@ -1,14 +1,13 @@
 steps:
-  - label: "Run tests with Julia v{{matrix.version}}"
+  - label: "Run Docker with Julia v{{matrix.version}}"
+    agents:
+      queue: "docker"
     matrix:
       setup:
         version:
           - "1.9"
-    command: |
-        echo "BUILDKITE_BRANCH=$${BUILDKITE_BRANCH}"
     plugins:
-      - JuliaCI/julia#v1:
-          version: "{{matrix.version}}"
-      - JuliaCI/julia-test#v1:
-          coverage: true
-      - JuliaCI/julia-coverage#v1: ~
+      - docker#v5.6.0:
+          image: "ubuntu:22.04"
+          command: [".buildkite/pipeline-docker.sh"]
+          environment: ["JULIA_VERSION={{matrix.version}}"]
