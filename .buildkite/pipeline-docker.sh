@@ -26,11 +26,11 @@ apt-get install -y curl
 
 # Install Juliaup and set Julia version
 echo $JULIA_VERSION
-find .
 curl -fsSL https://install.julialang.org | sh -s -- -y
+. /root/.bashrc
+. /root/.profile
 juliaup add $JULIA_VERSION
 juliaup default $JULIA_VERSION
-find .
 
 # Verify Julia installation
 julia -e 'using InteractiveUtils; versioninfo(verbose=true)'
