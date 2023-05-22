@@ -1,0 +1,13 @@
+steps:
+  - label: "Run Docker with Julia v{{matrix.version}}"
+    agents:
+      queue: "docker"
+    matrix:
+      setup:
+        version:
+          - "1.9"
+    plugins:
+      - docker#v5.6.0:
+          image: "ubuntu:22.04"
+          command: [".buildkite/pipeline-docker.sh"]
+          environment: ["JULIA_VERSION={{matrix.version}}"]

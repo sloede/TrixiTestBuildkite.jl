@@ -4,6 +4,8 @@ steps:
       setup:
         version:
           - "1.9"
+    command: |
+        echo "BUILDKITE_BRANCH=$${BUILDKITE_BRANCH}"
     plugins:
       - JuliaCI/julia#v1:
           version: "{{matrix.version}}"
